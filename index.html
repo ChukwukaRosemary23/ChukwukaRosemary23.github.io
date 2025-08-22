@@ -278,7 +278,118 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+             .hero-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgba(255,255,255,0.9);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+.hero-text {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #fff, #f0f0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.9);
+    font-weight: 300;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cta-button.primary {
+    background: #ff6b6b;
+    color: white;
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.8);
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .profile-image {
+        flex: none;
+    }
+    
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .hero-text {
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+            
         }
+        
     </style>
 </head>
 <body>
@@ -294,13 +405,25 @@
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1>Full Stack Developer</h1>
-                <p>Building modern web applications with the MERN Stack</p>
-                <a href="#projects" class="cta-button">View My Work</a>
+       <section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="profile-image">
+                <img src="Profile.jpg" alt="Rosemary Chukwuka" class="profile-pic">
             </div>
-        </section>
+            <div class="hero-text">
+                <h1>Rosemary Chukwuka</h1>
+                <h2>Full Stack Developer</h2>
+                <p>Passionate about building modern web applications with the MERN Stack. 
+                   Creating scalable, user-friendly solutions that make a difference.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="cta-button primary">View My Work</a>
+                    <a href="#contact" class="cta-button secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section id="projects" class="projects">
             <div class="container">
